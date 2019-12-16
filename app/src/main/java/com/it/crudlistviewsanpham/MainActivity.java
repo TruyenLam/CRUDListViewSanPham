@@ -3,6 +3,7 @@ package com.it.crudlistviewsanpham;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lvSanpham;
     ArrayList<sanpham> arraySanpham;
     sanphamAdapter adapter;
+    Button btnThem,btnXoa,btnSua;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void load() {
         lvSanpham = (ListView) findViewById(R.id.ListViewSanPham);
+        btnThem = (Button) findViewById(R.id.buttonThem);
+        btnSua=(Button) findViewById(R.id.buttonSua);
+        btnXoa=(Button) findViewById(R.id.buttonXoa);
+
         arraySanpham = new ArrayList<>();
 
         arraySanpham.add(new sanpham("MH0012345678","San pham 1",10));
