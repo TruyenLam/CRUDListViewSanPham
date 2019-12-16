@@ -43,21 +43,34 @@ public class sanphamAdapter extends BaseAdapter {
         return position;
     }
 
+    private class ViewHolder{
+        TextView txtMasp,txtTensp,txtSoluong;
+
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        convertView = inflater.inflate(layout,null);
-        TextView txtMasp = (TextView) convertView.findViewById(R.id.TextViewMasp);
-        TextView txtTensp= (TextView) convertView.findViewById(R.id.TextViewTensp);
-        TextView txtSoluong = (TextView) convertView.findViewById(R.id.TextViewSoluong);
+        ViewHolder holder;
+        if(convertView == null){
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(layout,null);
+
+            holder = new ViewHolder();
+            holder.txtMasp = (TextView) convertView.findViewById(R.id.TextViewMasp);
+            holder.txtTensp= (TextView) convertView.findViewById(R.id.TextViewTensp);
+            holder.txtSoluong= (TextView) convertView.findViewById(R.id.TextViewSoluong);
+            convertView.setTag(holder);
+        }else{
+            holder =(ViewHolder) convertView.getTag();
+        }
 
         //gan gia tri
         sanpham sanpham = sanphamList.get(position);
 
-        txtMasp.setText(sanpham.getMasp());
-        txtTensp.setText(sanpham.getTensp());
-        txtSoluong.setText(String.valueOf(sanpham.getSoluong()));
+        holder.txtMasp.setText(sanpham.getMasp());
+        holder.txtTensp.setText(sanpham.getTensp());
+        holder.txtSoluong.setText(String.valueOf(sanpham.getSoluong()));
 
 
         return convertView;
