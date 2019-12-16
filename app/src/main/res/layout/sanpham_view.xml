@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/TextViewMasp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0123456789"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TextViewTensp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="san pham "
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/TextViewSoluong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="1000"
+        android:textSize="20sp"
+        android:textStyle="normal|italic" />
+</LinearLayout>
