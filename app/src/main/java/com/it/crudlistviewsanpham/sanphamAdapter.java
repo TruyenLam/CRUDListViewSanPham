@@ -35,7 +35,9 @@ public class sanphamAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return null;
+        //Trả về dữ liệu ở vị trí position của Adapter, tương ứng là phần tử
+        //có chỉ số position trong listProduct
+        return sanphamList.get(position);
     }
 
     @Override
