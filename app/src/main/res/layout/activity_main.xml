@@ -29,10 +29,42 @@
         android:text="Sữa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editTextMasp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonThem"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:hint="nhap ma san pham" />
+
+    <EditText
+        android:id="@+id/editTextTensp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextMasp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:hint="nhap so luong san pham" />
+    <EditText
+        android:id="@+id/editTextSoluong"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:hint="nhap so luong san pham"
+        android:layout_below="@id/editTextTensp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+         />
+
     <ListView
         android:id="@+id/ListViewSanPham"
         android:paddingTop="10dp"
-        android:layout_below="@id/buttonThem"
+        android:layout_below="@id/editTextSoluong"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </RelativeLayout>
